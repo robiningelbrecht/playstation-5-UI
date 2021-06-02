@@ -1,0 +1,28 @@
+.js-flickity .flickity-slider {
+    margin-top: 5px;
+    margin-left: 110px;
+}
+
+.js-flickity .flickity-slider .slide {
+    transition: transform 0.4s, left 0.4s, opacity 0.4s, z-index 0s;
+    width: 125px;
+    height: 200px;
+    display: inline-block;
+}
+
+.js-flickity .flickity-slider .slide.is-selected {
+    width: 190px;
+}
+
+.js-flickity .flickity-slider .slide img {
+    width: 110px;
+    transition: width 0.4s;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.js-flickity .flickity-slider .slide.is-selected img {
+    width: 175px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 2px rgb(216, 216, 216);
+}
