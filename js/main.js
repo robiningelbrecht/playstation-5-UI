@@ -6,25 +6,30 @@ setInterval(() => {
 }, 60000);
 
 // Init Flickity.
-let flkty = new Flickity(document.querySelector('.js-flickity'), {
+let flkty_el = document.querySelector('.js-flickity')
+let flkty = new Flickity(flkty_el, {
   contain: false,
   pageDots: false,
   prevNextButtons: false,
   percentPosition: false,
   imagesLoaded: true,
   cellAlign: 'left',
-  draggable: false,
+  draggable: true,
 });
+// Explicitly select first slide to trigger select event.
+flkty.select(0);
+// Focus Flickity on page load, to make sure arrow keys work.
+flkty_el.focus();
 
 // Init background.
 let body = document.querySelector('body');
 body.style.backgroundImage = 'url(' + flkty.cells[0].element.dataset.background + ')';
 
 let slide_positions = flkty.cells.map((slide) => {
-  return parseInt(slide.element.style.left);
+  return parseInt(slide.element.style.left, 10);
 });
 
-flkty.on('change', function (index) {
+flkty.on('select', function (index) {
   // Set background.
   body.style.backgroundImage = 'url(' + flkty.cells[index].element.dataset.background + ')';
 
@@ -45,5 +50,12 @@ flkty.on('change', function (index) {
 document.querySelectorAll('.js-flickity .slide').forEach((cell, index) => {
   cell.addEventListener('click', () => {
     flkty.select(index);
+  });
+});
+
+// Event listener to make sure Flickity is always focused to allow to use arrow keys.
+document.querySelectorAll('*').forEach((el) => {
+  el.addEventListener('click', () => {
+    flkty_el.focus();
   });
 });

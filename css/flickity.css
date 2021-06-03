@@ -10,10 +10,6 @@
     display: inline-block;
 }
 
-.js-flickity .flickity-slider .slide.is-selected {
-    width: 125px;
-}
-
 .js-flickity .flickity-slider .slide img {
     width: 110px;
     transition: width 0.4s;
