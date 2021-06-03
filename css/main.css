@@ -28,13 +28,22 @@ body::before {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+}
+
+header { grid-area: 1 / 2 / 2 / 12; }
+main { grid-area: 2 / 1 / 3 / 13; }
+
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-width: 1650px;
-    margin: 0 auto;
-    padding: 2.5em 1em;
+    padding: 2.5em 0;
 }
 
 header .left,

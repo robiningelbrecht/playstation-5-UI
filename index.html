@@ -17,39 +17,45 @@
     <link rel="stylesheet" href="css/flickity.css">
 </head>
 <body>
-<header>
-    <div class="left">
-        <a href="#">Games</a>
-    </div>
-    <div class="right">
-        <a href="#">
-            <img src="https://i.psnprofiles.com/avatars/m/Gc0466d545.png" class="profile-pic" alt="profile picture"/>
-        </a>
-        <span class="time">12:20</span>
-    </div>
-</header>
 
-<div class="content">
-    <div class="js-flickity">
-        <div class="slide" data-background="https://i.psnprofiles.com/games/54fddf/LHdf9dd0.jpg" data-background-placeholder="https://i.psnprofiles.com/games/54fddf/XSH0b8aaf.png">
-            <img src="assets/images/game-thumbnail-demons-souls.png">
+<div class="grid-container">
+    <header>
+        <div class="left">
+            <a href="#">Games</a>
         </div>
-        <div class="slide" data-background="https://i.psnprofiles.com/games/c04f86/LH5ffb13.jpg">
-            <img src="assets/images/game-thumbnail-dirt-5.png">
+        <div class="right">
+            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="#"><i class="fas fa-cog"></i></a>
+            <a href="#">
+                <img src="https://i.psnprofiles.com/avatars/m/Gc0466d545.png" class="profile-pic"
+                     alt="profile picture"/>
+            </a>
+            <span class="time">12:20</span>
         </div>
-        <div class="slide" data-background="https://i.psnprofiles.com/games/467d35/LH0938bc.jpg">
-            <img src="assets/images/game-thumbnail-sackboy.png">
+    </header>
+    <main>
+        <div class="js-flickity games">
+            <div class="slide" data-background="https://i.psnprofiles.com/games/54fddf/LHdf9dd0.jpg"
+                 data-background-placeholder="https://i.psnprofiles.com/games/54fddf/XSH0b8aaf.png">
+                <img src="assets/images/game-thumbnail-demons-souls.png">
+            </div>
+            <div class="slide" data-background="https://i.psnprofiles.com/games/c04f86/LH5ffb13.jpg">
+                <img src="assets/images/game-thumbnail-dirt-5.png">
+            </div>
+            <div class="slide" data-background="https://i.psnprofiles.com/games/467d35/LH0938bc.jpg">
+                <img src="assets/images/game-thumbnail-sackboy.png">
+            </div>
+            <div class="slide" data-background="https://i.psnprofiles.com/games/310204/LH4e616b.jpg">
+                <img src="assets/images/game-thumbnail-spider-man.png">
+            </div>
+            <div class="slide" data-background="https://i.psnprofiles.com/games/5ab0bd/LHa19a41.jpg">
+                <img src="assets/images/game-thumbnail-watch-dogs.png">
+            </div>
+            <div class="slide" data-background="https://i.psnprofiles.com/games/dfacc0/LHa0b9fb.jpg">
+                <img src="assets/images/game-thumbnail-yakuza.png">
+            </div>
         </div>
-        <div class="slide" data-background="https://i.psnprofiles.com/games/310204/LH4e616b.jpg">
-            <img src="assets/images/game-thumbnail-spider-man.png">
-        </div>
-        <div class="slide" data-background="https://i.psnprofiles.com/games/5ab0bd/LHa19a41.jpg">
-            <img src="assets/images/game-thumbnail-watch-dogs.png">
-        </div>
-        <div class="slide" data-background="https://i.psnprofiles.com/games/dfacc0/LHa0b9fb.jpg">
-            <img src="assets/images/game-thumbnail-yakuza.png">
-        </div>
-    </div>
+    </main>
 </div>
 
 <script src="assets/libraries/momentjs/moment.min.js"></script>

@@ -1,6 +1,6 @@
 .js-flickity .flickity-slider {
     margin-top: 5px;
-    margin-left: 110px;
+    margin-left: 8.33333333333333%;
 }
 
 .js-flickity .flickity-slider .slide {
@@ -11,7 +11,7 @@
 }
 
 .js-flickity .flickity-slider .slide.is-selected {
-    width: 190px;
+    width: 125px;
 }
 
 .js-flickity .flickity-slider .slide img {

@@ -13,7 +13,7 @@ let flkty = new Flickity(document.querySelector('.js-flickity'), {
   percentPosition: false,
   imagesLoaded: true,
   cellAlign: 'left',
-  draggable: false
+  draggable: false,
 });
 
 // Init background.
