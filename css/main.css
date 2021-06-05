@@ -6,7 +6,7 @@ body {
     background-position: top center;
     background-repeat: no-repeat;
     transition: background-image 0.5s ease-in-out;
-    background-image: url(/assets/images/ps5-bg.png);
+    background-image: url(/assets/images/ps5-bg-low-res.png);
 }
 
 body::before {
@@ -15,7 +15,7 @@ body::before {
     height: 100%;
     width: 100%;
     z-index: -1;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 header {
@@ -72,14 +72,21 @@ footer {
     flex-wrap: wrap;
 }
 
+footer .footer--left .logo img {
+    max-width: 30%;
+    object-fit: cover;
+    min-height: 350px;
+}
+
 footer .footer--left h3 {
     font-size: 1.5em;
 }
 
 footer .cover {
     position: relative;
-    background-image: url(/assets/images/game-thumbnail-dirt-5.png);
+    background-image: url(/assets/images/example/tr-thumb.png);
     background-size: cover;
+    background-position: center;
     width: 250px;
     height: 250px;
     box-sizing: border-box;

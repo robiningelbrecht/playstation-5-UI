@@ -1,3 +1,6 @@
+// https://github.com/craigbuckler/progressive-image.js
+
+
 // Init clock.
 document.querySelector('.time').innerHTML = moment().format('H:mm');
 
@@ -29,8 +32,8 @@ let slide_positions = flkty.cells.map((slide) => {
 });
 
 flkty.on('select', function (index) {
-  // Set background.
-  //body.style.backgroundImage = 'url(' + flkty.cells[index].element.dataset.background + ')';
+  // Un comment to set background based on data attribute of current slide.
+  // body.style.backgroundImage = 'url(' + flkty.cells[index].element.dataset.background + ')';
 
   // Reset positions of all slides to original.
   flkty.cells.forEach((slide, slide_index) => {
@@ -58,3 +61,16 @@ document.querySelectorAll('*').forEach((el) => {
     flkty_el.focus();
   });
 });
+
+// Lazy load high def version of background.
+window.onload = function loadStuff() {
+  let img = new Image();
+
+  // Assign an onLoad handler to the dummy image *before* assigning the src
+  img.onload = function () {
+    body.style.backgroundImage = 'url(' + body.dataset.background + ')';
+  };
+  // Finally, trigger the whole preloading chain by giving the dummy
+  // image its source.
+  img.src = body.dataset.background;
+};
