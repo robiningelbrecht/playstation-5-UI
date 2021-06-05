@@ -1,79 +1,97 @@
-* {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-}
-
-.font-weight-100 {
-    font-weight: 100;
-}
-
 body {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     font-family: 'Poppins', sans-serif;
-    background-size: contain;
+    background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
     transition: background-image 0.5s ease-in-out;
+    background-image: url(/assets/images/ps5-bg.png);
 }
 
 body::before {
     content: "";
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     z-index: -1;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
 }
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(2, auto);
-    grid-column-gap: 0;
-    grid-row-gap: 0;
-    grid-template-areas:
-    ". header header header header header header header header header header ."
-    "main main main main main main main main main main main main";
-}
-
-header { grid-area: header; }
-main { grid-area: main; }
 
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 1.5em 0;
 }
 
-header .left,
-header .right {
+header .header--left,
+header .header--right {
     display: flex;
     align-items: center;
 }
 
 header a {
-    color: #adadad;
     font-size: 2em;
-    display: flex;
 }
 
-header .left a:nth-child(1) {
-    color: #ffffff;
-}
-
-header .right .time {
-    color: #ffffff;
+header .header--right .time {
     font-size: 2em;
-    font-weight: 100;
 }
 
-header .right img.profile-pic {
+header .header--right a.profile-pic {
+    position: relative;
+    margin-right: 20px;
+    height: 50px;
+    width: 50px;
+}
+
+header .header--right a.profile-pic img {
     height: 50px;
     border-radius: 50px;
     margin-right: 20px;
 }
 
+header .header--right a.profile-pic::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-size: 18px 18px;
+    background-image: url(/assets/images/ps-plus.png);
+    position: absolute;
+    left: 35px;
+    top: 32px;
+    z-index: 1;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .footer--left h3 {
+    font-size: 1.5em;
+}
+
+footer .cover {
+    position: relative;
+    background-image: url(/assets/images/game-thumbnail-dirt-5.png);
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+footer .cover::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 45%, #000 90%);
+}

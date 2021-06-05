@@ -1,6 +1,6 @@
 .js-flickity .flickity-slider {
     margin-top: 5px;
-    margin-left: 8.33333333333333%;
+    margin-left: 12.5%;
 }
 
 .js-flickity .flickity-slider .slide {
@@ -11,32 +11,33 @@
 }
 
 .js-flickity .flickity-slider .slide span {
-    color: rgb(233, 233, 233);
     font-size: 1.4em;
-    font-weight: 200;
     position: absolute;
     top: 125px;
     left: 190px;
     width: max-content;
     transition: opacity 0.5s ease;
-    transform:translate(9999px);
+    transform: translate(9999px);
     opacity: 0;
 }
 
 .js-flickity .flickity-slider .slide.is-selected span {
-    transform:translate(0);
+    transform: translate(0);
     opacity: 1;
 }
 
 .js-flickity .flickity-slider .slide img {
+    object-fit: cover;
     width: 110px;
-    transition: width 0.4s;
+    height: 110px;
+    transition: width 0.4s, height 0.4s;
     border-radius: 30px;
     cursor: pointer;
 }
 
 .js-flickity .flickity-slider .slide.is-selected img {
     width: 175px;
+    height: 175px;
     border: 2px solid transparent;
     box-shadow: 0 0 0 2px rgb(216, 216, 216);
 }
