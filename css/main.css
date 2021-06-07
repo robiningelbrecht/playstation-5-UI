@@ -72,19 +72,13 @@ footer {
     flex-wrap: wrap;
 }
 
-footer .footer--left .logo img {
-    max-width: 30%;
-    object-fit: cover;
-    min-height: 350px;
-}
-
 footer .footer--left h3 {
     font-size: 1.5em;
 }
 
 footer .cover {
     position: relative;
-    background-image: url(/assets/images/example/tr-thumb.png);
+    background-image: url(/assets/images/example/tr-bg.jpg);
     background-size: cover;
     background-position: center;
     width: 250px;
