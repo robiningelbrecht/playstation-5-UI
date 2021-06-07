@@ -96,3 +96,34 @@ footer .cover::before {
     height: 100%;
     background: linear-gradient(to bottom, transparent 45%, #000 90%);
 }
+
+.trophies{
+    display: flex;
+}
+
+.trophy {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 70px;
+    width: 60px;
+    background-repeat: no-repeat;
+    background-size: auto 40px;
+    background-position: center top;
+}
+
+.trophy.trophy--bronze{
+    background-image: url(/assets/images/trophies/trophy-bronze.png);
+}
+
+.trophy.trophy--silver{
+    background-image: url(/assets/images/trophies/trophy-silver.png);
+}
+
+.trophy.trophy--gold{
+    background-image: url(/assets/images/trophies/trophy-gold.png);
+}
+
+.trophy.trophy--platinum{
+    background-image: url(/assets/images/trophies/trophy-platinum.png);
+}
