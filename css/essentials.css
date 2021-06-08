@@ -60,5 +60,9 @@
 }
 
 .container--opacity.rounded-borders {
+    border-radius: 5px;
+}
+
+.container--opacity.rounded-borders.heavy {
     border-radius: 50px;
 }
