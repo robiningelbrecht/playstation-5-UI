@@ -10,25 +10,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet">
 
+    <link rel="stylesheet" href="assets/libraries/tailwind/tailwind.min.css">
     <link rel="stylesheet" href="assets/libraries/flickity/flickity.min.css">
-    <link rel="stylesheet" href="/assets/libraries/fontawesome/css/fontawesome.min.css">
 
     <link rel="stylesheet" href="css/essentials.css">
     <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/flickity.css">
 </head>
-<body data-background="assets/images/ps5-bg.png">
-<div class="grid-container">
-    <header>
-        <section class="header--left c-white">
-            <a href="#" class="c-white">Robin Ingelbrecht</a>
+<body data-background="assets/images/ps5-bg.png" class="min-h-screen w-full">
+<div class="grid-container min-h-screen">
+    <header class="flex flex-row justify-between flex-wrap py-5">
+        <section class="flex items-center">
+            <a href="#" class="text-white text-3xl">Robin Ingelbrecht</a>
         </section>
-        <section class="header--right">
+        <section class="flex items-center">
             <a href="#" class="profile-pic">
                 <img src="https://i.psnprofiles.com/avatars/m/Gc0466d545.png" alt="profile picture"/>
             </a>
-            <span class="time fw-100 c-white">12:20</span>
+            <span class="time font-thin text-white text-3xl">12:20</span>
         </section>
     </header>
     <main>
@@ -36,43 +36,43 @@
             <!--
                <div class="slide" data-background="https://i.psnprofiles.com/games/54fddf/LHdf9dd0.jpg">
                 <img src="https://i.psnprofiles.com/games/1d3181/Lfd929b.png">
-                <span class="c-light-grey fw-200">Demon's Souls | PS5</span>
+                <span class="text-gray-50 font-extralight">Demon's Souls | PS5</span>
                </div>
              -->
             <div class="slide">
                 <img src="assets/images/psn-profiles-logo.png">
-                <span class="c-light-grey fw-200">PSN Profile</span>
+                <span class="text-gray-50 font-extralight">PSN Profile</span>
             </div>
             <div class="slide">
                 <img src="assets/images/example/tr-thumb.png">
-                <span class="c-light-grey fw-200">Demon's Souls | PS5</span>
+                <span class="text-gray-50 font-extralight">Demon's Souls | PS5</span>
             </div>
             <div class="slide">
                 <img src="assets/images/example/tr-thumb.png">
-                <span class="c-light-grey fw-200">Dirt 5 | PS4</span>
+                <span class="text-gray-50 font-extralight">Dirt 5 | PS4</span>
             </div>
             <div class="slide">
                 <img src="assets/images/example/tr-thumb.png">
-                <span class="c-light-grey fw-200">Sackboy: A big adventure | PS5</span>
+                <span class="text-gray-50 font-extralight">Sackboy: A big adventure | PS5</span>
             </div>
             <div class="slide">
                 <img src="assets/images/example/tr-thumb.png">
-                <span class="c-light-grey fw-200">Spiderman | PS5</span>
+                <span class="text-gray-50 font-extralight">Spiderman | PS5</span>
             </div>
             <div class="slide">
                 <img src="assets/images/example/tr-thumb.png">
-                <span class="c-light-grey fw-200">Watch dogs Legion | PS4</span>
+                <span class="text-gray-50 font-extralight">Watch dogs Legion | PS4</span>
             </div>
             <div class="slide">
                 <img src="assets/images/example/tr-thumb.png">
-                <span class="c-light-grey fw-200">Yakuza | PS4</span>
+                <span class="text-gray-50 font-extralight">Yakuza | PS4</span>
             </div>
         </div>
     </main>
-    <footer>
+    <footer class="flex flex-row justify-between flex-wrap">
         <section class="footer--left">
-            <h3 class="fw-200 c-white">Trophy stats</h3>
-            <div class="trophies container--opacity c-white">
+            <h3 class="text-2xl text-white font-extralight">Trophy stats</h3>
+            <div class="trophies container--opacity text-white">
                 <div class="trophy trophy--platinum">
                     <span>1</span>
                 </div>
@@ -86,16 +86,16 @@
                     <span>0</span>
                 </div>
             </div>
-            <div class="container--opacity d-flex justify-content-space-around">
-                <div class="d-flex flex-direction-column align-items-center">
-                    <div class="c-light-grey fs-08">Progress</div>
-                    <span  class="c-white">0%</span>
+            <div class="container--opacity flex justify-around">
+                <div class="flex flex-col items-center">
+                    <div class="text-gray-50 text-sm">Progress</div>
+                    <span  class="text-white">0%</span>
                 </div>
-                <div class="d-flex flex-direction-column align-items-center">
-                    <div class="c-light-grey fs-08">Earned</div>
-                    <span class="c-white">0 / 27</span>
+                <div class="flex flex-col items-center">
+                    <div class="text-gray-50 text-sm">Earned</div>
+                    <span class="text-white">0 / 27</span>
                 </div>
-                <div class="d-flex align-items-center container--opacity light c-white rounded-borders">
+                <div class="flex items-center container--opacity light text-white rounded">
                     <span>Rank E</span>
                 </div>
             </div>
@@ -104,7 +104,7 @@
             <div class="cover">
                 Some text
             </div>
-            <div class="container--opacity c-light-grey">
+            <div class="container--opacity text-gray-50">
                 lalal
             </div>
         </section>

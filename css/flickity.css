@@ -28,6 +28,7 @@
 
 .js-flickity .flickity-slider .slide img {
     object-fit: cover;
+    max-width: none;
     width: 110px;
     height: 110px;
     transition: width 0.4s, height 0.4s;
