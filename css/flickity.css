@@ -42,3 +42,20 @@
     border: 2px solid transparent;
     box-shadow: 0 0 0 2px rgb(216, 216, 216);
 }
+
+/** ICON SLIDES **/
+.js-flickity .flickity-slider .slide.icon::before {
+    content: '';
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 30px;
+    transition: width 0.4s, height 0.4s;
+    z-index: -1;
+}
+
+.js-flickity .flickity-slider .slide.is-selected.icon::before {
+    width: 175px;
+    height: 175px;
+}
