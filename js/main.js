@@ -32,8 +32,10 @@ let slide_positions = flkty.cells.map((slide) => {
 });
 
 flkty.on('select', function (index) {
-  // Uncomment to set background based on data attribute of current slide.
-  // body.style.backgroundImage = 'url(' + flkty.cells[index].element.dataset.background + ')';
+  // Set background based on data attribute of current slide.
+  if (flkty.cells[index].element.dataset.background !== undefined) {
+    body.style.backgroundImage = 'url(' + flkty.cells[index].element.dataset.background + ')';
+  }
 
   // Reset positions of all slides to original.
   flkty.cells.forEach((slide, slide_index) => {
