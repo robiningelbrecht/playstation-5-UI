@@ -17,12 +17,10 @@
     left: 190px;
     width: max-content;
     transition: opacity 0.5s ease;
-    transform: translate(9999px);
     opacity: 0;
 }
 
 .js-flickity .flickity-slider .slide.is-selected span {
-    transform: translate(0);
     opacity: 1;
 }
 

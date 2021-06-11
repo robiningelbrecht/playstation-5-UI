@@ -24,7 +24,7 @@ flkty.select(1);
 // Focus Flickity on page load, to make sure arrow keys work.
 flkty_el.focus();
 
-// Init background.
+
 let body = document.querySelector('body');
 
 let slide_positions = flkty.cells.map((slide) => {
@@ -32,20 +32,26 @@ let slide_positions = flkty.cells.map((slide) => {
 });
 
 flkty.on('select', function (index) {
-  // Un comment to set background based on data attribute of current slide.
+  // Uncomment to set background based on data attribute of current slide.
   // body.style.backgroundImage = 'url(' + flkty.cells[index].element.dataset.background + ')';
 
   // Reset positions of all slides to original.
   flkty.cells.forEach((slide, slide_index) => {
     let left = slide_positions[slide_index];
     slide.element.style.left = (left) + "px"
-  })
+  });
 
   // Move all slides right to the selected one, 75px to the right.
   flkty.cells.slice(index + 1).forEach((slide, slide_index) => {
     let left = slide_positions[slide_index + index + 1];
     slide.element.style.left = (left + 75) + "px"
-  })
+  });
+
+  // Show footer content based on selected slide.
+  document.querySelectorAll('footer[data-slide-index]').forEach((el) => {
+    el.classList.remove('is-selected');
+  });
+  document.querySelector('footer[data-slide-index="' + index + '"]').classList.add(...['is-selected']);
 });
 
 // Event listener to slide to Flickity index on click.

@@ -5,6 +5,7 @@ body {
     background-repeat: no-repeat;
     transition: background-image 0.5s ease-in-out;
     background-image: url(/assets/images/ps5-bg-low-res.png);
+    overflow-x: hidden;
 }
 
 body::before {
@@ -45,7 +46,16 @@ header a.profile-pic::before {
 
 /** FOOTER **/
 
-footer .footer--right{
+footer {
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+footer.is-selected {
+    opacity: 1;
+}
+
+footer .footer--right {
     width: 320px;
 }
 
@@ -70,8 +80,8 @@ footer .cover.drop-shadow::before {
     background: linear-gradient(to bottom, transparent 45%, #000 90%);
 }
 
-footer .footer-middle > div > div {
-    width: 250px;
+.truncate {
+    max-width: 100px;
 }
 
 /** TROPHIES **/
@@ -92,7 +102,7 @@ footer .footer-middle > div > div {
     background-position: center top;
 }
 
-.trophy.trophy--small{
+.trophy.trophy--small {
     background-size: auto 25px;
     height: 25px;
     width: 25px;
@@ -112,6 +122,47 @@ footer .footer-middle > div > div {
 
 .trophy.trophy--platinum {
     background-image: url(/assets/images/trophies/trophy-platinum.png);
+}
+
+.completed {
+    background-color: rgba(52, 211, 153, 0.3) !important;
+}
+
+.rank {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    line-height: 20px;
+    justify-content: center;
+}
+
+.rank.rank--s {
+    background: rgba(101, 127, 178, 0.7);
+}
+
+.rank.rank--a {
+    background: rgba(0, 128, 0, 0.7);
+}
+
+.rank.rank--b {
+    background: rgba(123, 158, 0, 0.7);
+}
+
+.rank.rank--c {
+    background: rgba(166, 142, 0, 0.7);
+}
+
+.rank.rank--d {
+    background: rgba(166, 106, 0, 0.7);
+}
+
+.rank.rank--e {
+    background: rgba(255, 65, 0, 0.7);
+}
+
+.rank.rank--f {
+    background: rgba(238, 0, 0, 0.7);
 }
 
 /** CONTAINER WITH OPACITY **/
