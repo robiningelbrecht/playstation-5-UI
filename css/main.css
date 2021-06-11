@@ -45,18 +45,22 @@ header a.profile-pic::before {
 
 /** FOOTER **/
 
+footer .footer--right{
+    width: 320px;
+}
+
 footer .cover {
     position: relative;
     background-image: url(/assets/images/example/tr-bg.jpg);
     background-size: cover;
     background-position: center;
-    width: 250px;
-    height: 250px;
+    width: 320px;
+    height: 175px;
     box-sizing: border-box;
     padding: 10px;
 }
 
-footer .cover::before {
+footer .cover.drop-shadow::before {
     content: '';
     position: absolute;
     left: 0;
@@ -66,10 +70,15 @@ footer .cover::before {
     background: linear-gradient(to bottom, transparent 45%, #000 90%);
 }
 
+footer .footer-middle > div > div {
+    width: 250px;
+}
+
 /** TROPHIES **/
 
 .trophies {
     display: flex;
+    justify-content: center;
 }
 
 .trophy {
@@ -81,6 +90,12 @@ footer .cover::before {
     background-repeat: no-repeat;
     background-size: auto 40px;
     background-position: center top;
+}
+
+.trophy.trophy--small{
+    background-size: auto 25px;
+    height: 25px;
+    width: 25px;
 }
 
 .trophy.trophy--bronze {
@@ -99,21 +114,21 @@ footer .cover::before {
     background-image: url(/assets/images/trophies/trophy-platinum.png);
 }
 
-.container--opacity {
+/** CONTAINER WITH OPACITY **/
+
+.container-opacity {
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
 }
 
-/** CONTAINER WITH OPACITY **/
-
-.container--opacity.light {
+.container-opacity.container-opacity--light {
     background: rgba(255, 255, 255, 0.1);
 }
 
-.container--opacity.rounded-borders {
+.container-opacity.rounded-borders {
     border-radius: 5px;
 }
 
-.container--opacity.rounded-borders.heavy {
+.container-opacity.rounded-borders.heavy {
     border-radius: 50px;
 }
