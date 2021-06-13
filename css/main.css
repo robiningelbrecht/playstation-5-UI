@@ -55,9 +55,12 @@ header a.profile-pic::before {
 /** FOOTER **/
 
 footer {
-    transition: opacity 0.5s ease;
     opacity: 0;
     z-index: 0;
+}
+
+body.loaded footer {
+    transition: opacity 0.5s ease;
 }
 
 footer.is-selected {

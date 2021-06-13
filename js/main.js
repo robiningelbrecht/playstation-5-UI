@@ -20,7 +20,7 @@ let flkty = new Flickity(flkty_el, {
   draggable: true,
 });
 // Explicitly select first slide to trigger select event.
-flkty.select(1);
+flkty.select(0);
 // Focus Flickity on page load, to make sure arrow keys work.
 flkty_el.focus();
 
@@ -72,6 +72,9 @@ document.querySelectorAll('*').forEach((el) => {
 
 // Lazy load high def version of background.
 window.onload = function loadStuff() {
+  // Add class to body to "init" animations.
+  body.classList.add('loaded');
+
   let img = new Image();
 
   // Assign an onLoad handler to the dummy image *before* assigning the src
