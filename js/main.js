@@ -24,7 +24,6 @@ flkty.select(0);
 // Focus Flickity on page load, to make sure arrow keys work.
 flkty_el.focus();
 
-
 let body = document.querySelector('body');
 
 let slide_positions = flkty.cells.map((slide) => {
