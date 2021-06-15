@@ -29,11 +29,11 @@ footer {
 }
 
 footer.psn-profile {
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto 1fr;
     grid-template-areas:
-    "footer-top footer-top footer-top footer-top footer-top footer-top footer-top footer-top footer-top footer-top footer-top footer-top"
-    "footer-bottom footer-bottom footer-bottom footer-bottom footer-bottom footer-bottom footer-bottom footer-bottom footer-bottom footer-bottom footer-bottom footer-bottom";
+    "footer-top"
+    "footer-bottom";
 }
 
 footer section.footer--top {
