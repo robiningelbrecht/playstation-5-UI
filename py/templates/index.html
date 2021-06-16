@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>PS5 UI</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/favicon.png" sizes="16x16">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/libraries/tailwind/tailwind.min.css">
+    <link rel="stylesheet" href="assets/libraries/flickity/flickity.min.css">
+
+    <link rel="stylesheet" href="css/tailwind-overrides.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/flickity.css">
+</head>
+<body data-background="assets/images/ps5-bg.png" class="min-h-screen w-full">
+<div class="grid-container min-h-screen">
+    <header class="flex flex-row justify-between flex-wrap py-5">
+        <section class="flex items-center">
+            <a href="#" class="text-white text-3xl">Robin Ingelbrecht</a>
+        </section>
+        <section class="flex items-center">
+            <a href="#" class="profile-pic">
+                <img src="assets/images/profile-picture.png" alt="profile picture"/>
+            </a>
+            <span class="time font-thin text-white text-3xl">12:20</span>
+        </section>
+    </header>
+    <main>
+        <div class="js-flickity games text-gray-50 font-extralight">
+            <div class="slide icon">
+                <img src="assets/images/ps-plus-large.png">
+                <span>PSN Profile</span>
+            </div>
+            {{ games }}
+        </div>
+    </main>
+    <footer class="psn-profile mb-4" data-slide-index="0">
+        <section class="footer--top">
+            <div class="container-opacity container-opacity--light flex flex-wrap justify-around mb-2 space-x-2">
+                <div class="flex flex-col items-center text-center">
+                    <div class="text-gray-50 text-sm">Games played</div>
+                    <span class="text-white">170</span>
+                </div>
+                <div class="flex flex-col items-center text-center hidden lg:block">
+                    <div class="text-gray-50 text-sm">Completed games</div>
+                    <span class="text-white">61</span>
+                </div>
+                <div class="flex flex-col items-center text-center hidden md:block">
+                    <div class="text-gray-50 text-sm">Completion</div>
+                    <span class="text-white">56.25%</span>
+                </div>
+                <div class="flex flex-col items-center text-center hidden lg:block">
+                    <div class="text-gray-50 text-sm">Unearned trophies</div>
+                    <span class="text-white">2753</span>
+                </div>
+                <div class="flex flex-col items-center text-center hidden lg:block">
+                    <div class="text-gray-50 text-sm">Trophies / day</div>
+                    <span class="text-white">2.21</span>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="text-gray-50 text-sm">World rank</div>
+                    <span class="text-white">113149</span>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="text-gray-50 text-sm">Country rank</div>
+                    <span class="text-white">1500</span>
+                </div>
+            </div>
+        </section>
+        <section class="footer--bottom flex space-x-2 flex-wrap">
+            <div class="w-full md:w-auto">
+                <h3 class="container-opacity container-opacity--light text-white text-xl text-center font-light">
+                    Profile summary
+                </h3>
+                <div class="flex justify-center container-opacity container-opacity--light text-white">
+                    <div class="trophy trophy--level">
+                        <span>355</span>
+                    </div>
+                    <div class="trophy trophy--platinum">
+                        <span>1</span>
+                    </div>
+                    <div class="trophy trophy--gold">
+                        <span>0</span>
+                    </div>
+                    <div class="trophy trophy--silver">
+                        <span>0</span>
+                    </div>
+                    <div class="trophy trophy--bronze">
+                        <span>0</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center">
+                        <div class="text-gray-50 text-sm">Total</div>
+                        <span class="text-white">2152</span>
+                    </div>
+                </div>
+                <div class="container-opacity container-opacity--light flex justify-around">
+
+                </div>
+                <h3 class="container-opacity container-opacity--light text-white text-xl text-center font-light mt-2">
+                    Rarest trophies
+                </h3>
+                <div class="space-y-1">
+                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
+                        <div><img src="assets/images/example/trophy.png"></div>
+                        <div class="flex flex-col flex-grow">
+                            <div class="text-sm">In Mint Condition</div>
+                            <div class="text-xs">Got your first artefact!</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="text-sm text-center">3.28%</div>
+                            <div class="text-xs">Ultra rare</div>
+                        </div>
+                        <div class="trophy trophy--small trophy--bronze"></div>
+                    </div>
+                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
+                        <div><img src="assets/images/example/trophy.png"></div>
+                        <div class="flex flex-col flex-grow">
+                            <div class="text-sm">In Mint Condition</div>
+                            <div class="text-xs">Got your first artefact!</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="text-sm text-center">3.28%</div>
+                            <div class="text-xs">Ultra rare</div>
+                        </div>
+                        <div class="trophy trophy--small trophy--bronze"></div>
+                    </div>
+                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
+                        <div><img src="assets/images/example/trophy.png"></div>
+                        <div class="flex flex-col flex-grow">
+                            <div class="text-sm">In Mint Condition</div>
+                            <div class="text-xs">Got your first artefact!</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="text-sm text-center">3.28%</div>
+                            <div class="text-xs">Ultra rare</div>
+                        </div>
+                        <div class="trophy trophy--small trophy--bronze"></div>
+                    </div>
+                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
+                        <div><img src="assets/images/example/trophy.png"></div>
+                        <div class="flex flex-col flex-grow">
+                            <div class="text-sm">In Mint Condition</div>
+                            <div class="text-xs">Got your first artefact!</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="text-sm text-center">3.28%</div>
+                            <div class="text-xs">Ultra rare</div>
+                        </div>
+                        <div class="trophy trophy--small trophy--bronze"></div>
+                    </div>
+                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
+                        <div><img src="assets/images/example/trophy.png"></div>
+                        <div class="flex flex-col flex-grow">
+                            <div class="text-sm">In Mint Condition</div>
+                            <div class="text-xs">Got your first artefact!</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="text-sm text-center">3.28%</div>
+                            <div class="text-xs">Ultra rare</div>
+                        </div>
+                        <div class="trophy trophy--small trophy--bronze"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="container-opacity container-opacity--light text-white text-xl text-center font-light">
+                    Recent trophies
+                </h3>
+                <div class="space-y-1">
+                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
+                        <div><img src="assets/images/example/trophy.png"></div>
+                        <div class="flex flex-col flex-grow">
+                            <div class="text-sm">In Mint Condition</div>
+                            <div class="text-xs">Got your first artefact!</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="text-sm text-center">3.28%</div>
+                            <div class="text-xs">Ultra rare</div>
+                        </div>
+                        <div class="trophy trophy--small trophy--bronze"></div>
+                    </div>
+                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
+                        <div><img src="assets/images/example/trophy.png"></div>
+                        <div class="flex flex-col flex-grow">
+                            <div class="text-sm">In Mint Condition</div>
+                            <div class="text-xs">Got your first artefact!</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="text-sm text-center">3.28%</div>
+                            <div class="text-xs">Ultra rare</div>
+                        </div>
+                        <div class="trophy trophy--small trophy--bronze"></div>
+                    </div>
+                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
+                        <div><img src="assets/images/example/trophy.png"></div>
+                        <div class="flex flex-col flex-grow">
+                            <div class="text-sm">In Mint Condition</div>
+                            <div class="text-xs">Got your first artefact!</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="text-sm text-center">3.28%</div>
+                            <div class="text-xs">Ultra rare</div>
+                        </div>
+                        <div class="trophy trophy--small trophy--bronze"></div>
+                    </div>
+                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
+                        <div><img src="assets/images/example/trophy.png"></div>
+                        <div class="flex flex-col flex-grow">
+                            <div class="text-sm">In Mint Condition</div>
+                            <div class="text-xs">Got your first artefact!</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="text-sm text-center">3.28%</div>
+                            <div class="text-xs">Ultra rare</div>
+                        </div>
+                        <div class="trophy trophy--small trophy--bronze"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="container-opacity container-opacity--light text-white text-xl text-center font-light">
+                    Trophy milestones
+                </h3>
+                <div class="space-y-1">
+                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
+                        <div><img src="assets/images/example/trophy.png"></div>
+                        <div class="flex flex-col flex-grow">
+                            <div class="text-sm">In Mint Condition</div>
+                            <div class="text-xs">Got your first artefact!</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="text-sm text-right">Latest platinum</div>
+                            <div class="text-xs text-right">4 weeks ago</div>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
+                        <div><img src="assets/images/example/trophy.png"></div>
+                        <div class="flex flex-col flex-grow">
+                            <div class="text-sm">In Mint Condition</div>
+                            <div class="text-xs">Got your first artefact!</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="text-sm text-right">Latest platinum</div>
+                            <div class="text-xs text-right">4 weeks ago</div>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
+                        <div><img src="assets/images/example/trophy.png"></div>
+                        <div class="flex flex-col flex-grow">
+                            <div class="text-sm">In Mint Condition</div>
+                            <div class="text-xs">Got your first artefact!</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="text-sm text-right">Latest platinum</div>
+                            <div class="text-xs text-right">4 weeks ago</div>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
+                        <div><img src="assets/images/example/trophy.png"></div>
+                        <div class="flex flex-col flex-grow">
+                            <div class="text-sm">In Mint Condition</div>
+                            <div class="text-xs">Got your first artefact!</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="text-sm text-right">Latest platinum</div>
+                            <div class="text-xs text-right">4 weeks ago</div>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
+                        <div><img src="assets/images/example/trophy.png"></div>
+                        <div class="flex flex-col flex-grow">
+                            <div class="text-sm">In Mint Condition</div>
+                            <div class="text-xs">Got your first artefact!</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="text-sm text-right">Latest platinum</div>
+                            <div class="text-xs text-right">4 weeks ago</div>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
+                        <div><img src="assets/images/example/trophy.png"></div>
+                        <div class="flex flex-col flex-grow">
+                            <div class="text-sm">In Mint Condition</div>
+                            <div class="text-xs">Got your first artefact!</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="text-sm text-right">Latest platinum</div>
+                            <div class="text-xs text-right">4 weeks ago</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="container-opacity container-opacity--light text-white text-xl text-center font-light">
+                    Trophy cabinet
+                </h3>
+                <div class="space-y-1">
+                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
+                        <div><img src="assets/images/example/trophy.png"></div>
+                        <div class="flex flex-col flex-grow">
+                            <div class="text-sm">In Mint Condition</div>
+                            <div class="text-xs">Got your first artefact!</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="text-sm text-center">3.28%</div>
+                            <div class="text-xs">Ultra rare</div>
+                        </div>
+                        <div class="trophy trophy--small trophy--silver"></div>
+                    </div>
+                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
+                        <div><img src="assets/images/example/trophy.png"></div>
+                        <div class="flex flex-col flex-grow">
+                            <div class="text-sm">In Mint Condition</div>
+                            <div class="text-xs">Got your first artefact!</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="text-sm text-center">3.28%</div>
+                            <div class="text-xs">Ultra rare</div>
+                        </div>
+                        <div class="trophy trophy--small trophy--silver"></div>
+                    </div>
+                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
+                        <div><img src="assets/images/example/trophy.png"></div>
+                        <div class="flex flex-col flex-grow">
+                            <div class="text-sm">In Mint Condition</div>
+                            <div class="text-xs">Got your first artefact!</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="text-sm text-center">3.28%</div>
+                            <div class="text-xs">Ultra rare</div>
+                        </div>
+                        <div class="trophy trophy--small trophy--silver"></div>
+                    </div>
+                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
+                        <div><img src="assets/images/example/trophy.png"></div>
+                        <div class="flex flex-col flex-grow">
+                            <div class="text-sm">In Mint Condition</div>
+                            <div class="text-xs">Got your first artefact!</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="text-sm text-center">3.28%</div>
+                            <div class="text-xs">Ultra rare</div>
+                        </div>
+                        <div class="trophy trophy--small trophy--silver"></div>
+                    </div>
+                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
+                        <div><img src="assets/images/example/trophy.png"></div>
+                        <div class="flex flex-col flex-grow">
+                            <div class="text-sm">In Mint Condition</div>
+                            <div class="text-xs">Got your first artefact!</div>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="text-sm text-center">3.28%</div>
+                            <div class="text-xs">Ultra rare</div>
+                        </div>
+                        <div class="trophy trophy--small trophy--silver"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <footer class="mb-4" data-slide-index="1">
+        <section class="footer--left mb-4">
+            <h3 class="container-opacity container-opacity--light text-white text-xl text-center font-light">Your
+                progress</h3>
+            <div class="flex justify-center container-opacity container-opacity--light text-white">
+                <div class="trophy trophy--platinum">
+                    <span>1</span>
+                </div>
+                <div class="trophy trophy--gold">
+                    <span>0</span>
+                </div>
+                <div class="trophy trophy--silver">
+                    <span>0</span>
+                </div>
+                <div class="trophy trophy--bronze">
+                    <span>0</span>
+                </div>
+            </div>
+            <div class="container-opacity container-opacity--light flex justify-around">
+                <div class="flex flex-col items-center">
+                    <div class="text-gray-50 text-sm">Progress</div>
+                    <span class="text-white">0%</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="text-gray-50 text-sm">Earned</div>
+                    <span class="text-white">0 / 27</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="text-gray-50 text-sm">Rank</div>
+                    <span class="text-white font-medium rank rank--c">E</span>
+                </div>
+            </div>
+        </section>
+        <section class="footer--middle hidden 2xl:block">
+            <div class="flex flex-wrap justify-center gap-1">
+                <div class="flex space-x-1 text-white items-center container-opacity container-opacity--light">
+                    <div><img src="assets/images/example/trophy.png"></div>
+                    <div class="flex flex-col">
+                        <div class="text-sm truncate">In Mint Condition</div>
+                        <div class="text-xs truncate">Got your first artefact!</div>
+                    </div>
+                    <div class="trophy trophy--small trophy--bronze"></div>
+                </div>
+                <div class="flex space-x-1 text-white items-center container-opacity container-opacity--light completed">
+                    <div><img src="assets/images/example/trophy.png"></div>
+                    <div class="flex flex-col">
+                        <div class="text-sm truncate">In Mint Condition</div>
+                        <div class="text-xs truncate">Got your first artefact!</div>
+                    </div>
+                    <div class="trophy trophy--small trophy--bronze"></div>
+                </div>
+            </div>
+        </section>
+        <section class="footer--right">
+            <div class="cover">
+                <img src="/assets/images/example/tr-bg.jpg"/>
+            </div>
+            <div class="container-opacity container-opacity--light text-white">
+                <div class="flex items-center mb-2">
+                    <div class="w-1/3 text-right mr-3 italic text-sm">Developer</div>
+                    <div class="text-sm">Aquiris Game Studio</div>
+                </div>
+                <div class="flex items-center mb-2">
+                    <div class="w-1/3 text-right mr-3 italic text-sm">Publisher</div>
+                    <div class="text-sm">Aquiris Game Studio</div>
+                </div>
+                <div class="flex items-center mb-2">
+                    <div class="w-1/3 text-right mr-3 italic text-sm">Genres</div>
+                    <div class="text-sm">Racing, Sport, Indie, Arcade</div>
+                </div>
+                <div class="flex items-center mb-2">
+                    <div class="w-1/3 text-right mr-3 italic text-sm">Theme</div>
+                    <div class="text-sm">Action</div>
+                </div>
+                <div class="flex items-center mb-2">
+                    <div class="w-1/3 text-right mr-3 italic text-sm">Modes</div>
+                    <div class="text-sm">Single player, Multiplayer, Co-operative, Split screen</div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-1/3 text-right mr-3 italic text-sm">Release</div>
+                    <div class="text-sm">PS4 • WW • May 15, 2018</div>
+                </div>
+            </div>
+            <div class="flex justify-center container-opacity container-opacity--light text-white">
+                <div class="trophy trophy--platinum">
+                    <span>1</span>
+                </div>
+                <div class="trophy trophy--gold">
+                    <span>0</span>
+                </div>
+                <div class="trophy trophy--silver">
+                    <span>0</span>
+                </div>
+                <div class="trophy trophy--bronze">
+                    <span>0</span>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <footer class="mb-4" data-slide-index="2">
+        <div class="container-opacity container-opacity--light flex justify-around">
+            <span class="text-white">LAL</span>
+        </div>
+    </footer>
+    <footer class="mb-4" data-slide-index="3">
+        <div class="container-opacity container-opacity--light flex justify-around">
+            <span class="text-white">LAL</span>
+        </div>
+    </footer>
+</div>
+
+<script src="assets/libraries/momentjs/moment.min.js"></script>
+<script src="assets/libraries/flickity/flickity.pkgd.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
