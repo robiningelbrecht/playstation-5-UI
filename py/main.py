@@ -7,11 +7,8 @@ if __name__ == "__main__":
     scraper = PsnProfilesScraper()
     profile = scraper.get_profile("Fluttezuhher", False)
 
-    games = ""
-    for game in profile.get_games():
-        template_slide_game = env.get_template("slide-game.html")
-        games = games + template_slide_game.render(thumb=game.thumbnail_uri, title=game.title, platform=game.platform)
-
-    index = env.get_template("index.html")
-
-    print(index.render(games=games))
+    print(env.get_template("index.tpl.html").render(
+        games=profile.get_games(),
+        summary=profile.get_summary(),
+        rarest_trophies=profile.get_rarest_trophies(),
+    ))

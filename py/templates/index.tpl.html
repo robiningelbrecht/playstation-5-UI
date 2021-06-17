@@ -37,7 +37,12 @@
                 <img src="assets/images/ps-plus-large.png">
                 <span>PSN Profile</span>
             </div>
-            {{ games }}
+            {% for game in games -%}
+                <div class="slide">
+                    <img src="{{ game.thumbnail_uri }}">
+                    <span>{{ game.title }} | {{ game.platform }}</span>
+                </div>
+            {% endfor %}
         </div>
     </main>
     <footer class="psn-profile mb-4" data-slide-index="0">
@@ -45,31 +50,31 @@
             <div class="container-opacity container-opacity--light flex flex-wrap justify-around mb-2 space-x-2">
                 <div class="flex flex-col items-center text-center">
                     <div class="text-gray-50 text-sm">Games played</div>
-                    <span class="text-white">170</span>
+                    <span class="text-white">{{ summary.games.played }}</span>
                 </div>
                 <div class="flex flex-col items-center text-center hidden lg:block">
                     <div class="text-gray-50 text-sm">Completed games</div>
-                    <span class="text-white">61</span>
+                    <span class="text-white">{{ summary.games.completed }}</span>
                 </div>
                 <div class="flex flex-col items-center text-center hidden md:block">
                     <div class="text-gray-50 text-sm">Completion</div>
-                    <span class="text-white">56.25%</span>
+                    <span class="text-white">{{ summary.stats.completion.average }}</span>
                 </div>
                 <div class="flex flex-col items-center text-center hidden lg:block">
                     <div class="text-gray-50 text-sm">Unearned trophies</div>
-                    <span class="text-white">2753</span>
+                    <span class="text-white">{{ summary.stats.unearned_trophies }}</span>
                 </div>
                 <div class="flex flex-col items-center text-center hidden lg:block">
                     <div class="text-gray-50 text-sm">Trophies / day</div>
-                    <span class="text-white">2.21</span>
+                    <span class="text-white">{{ summary.stats.trophies_per_day }}</span>
                 </div>
                 <div class="flex flex-col items-center text-center">
                     <div class="text-gray-50 text-sm">World rank</div>
-                    <span class="text-white">113149</span>
+                    <span class="text-white">{{ summary.stats.world_rank }}</span>
                 </div>
                 <div class="flex flex-col items-center text-center">
                     <div class="text-gray-50 text-sm">Country rank</div>
-                    <span class="text-white">1500</span>
+                    <span class="text-white">{{ summary.stats.country_rank }}</span>
                 </div>
             </div>
         </section>
@@ -80,23 +85,23 @@
                 </h3>
                 <div class="flex justify-center container-opacity container-opacity--light text-white">
                     <div class="trophy trophy--level">
-                        <span>355</span>
+                        <span>{{ summary.level }}</span>
                     </div>
                     <div class="trophy trophy--platinum">
-                        <span>1</span>
+                        <span>{{ summary.trophies.grade.platinum }}</span>
                     </div>
                     <div class="trophy trophy--gold">
-                        <span>0</span>
+                        <span>{{ summary.trophies.grade.gold }}</span>
                     </div>
                     <div class="trophy trophy--silver">
-                        <span>0</span>
+                        <span>{{ summary.trophies.grade.silver }}</span>
                     </div>
                     <div class="trophy trophy--bronze">
-                        <span>0</span>
+                        <span>{{ summary.trophies.grade.bronze }}</span>
                     </div>
                     <div class="flex flex-col items-center justify-center">
                         <div class="text-gray-50 text-sm">Total</div>
-                        <span class="text-white">2152</span>
+                        <span class="text-white">{{ summary.trophies.total }}</span>
                     </div>
                 </div>
                 <div class="container-opacity container-opacity--light flex justify-around">
@@ -106,66 +111,20 @@
                     Rarest trophies
                 </h3>
                 <div class="space-y-1">
-                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
-                        <div><img src="assets/images/example/trophy.png"></div>
-                        <div class="flex flex-col flex-grow">
-                            <div class="text-sm">In Mint Condition</div>
-                            <div class="text-xs">Got your first artefact!</div>
+                    {% for trophy in rarest_trophies -%}
+                        <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
+                            <div><img src="{{ trophy.icon_uri }}"></div>
+                            <div class="flex flex-col flex-grow">
+                                <div class="text-sm">{{ trophy.title }}</div>
+                                <div class="text-xs">{{ trophy.description }}</div>
+                            </div>
+                            <div class="flex flex-col">
+                                <div class="text-sm text-center">{{ trophy.rarity_percentage }}</div>
+                                <div class="text-xs">{{ trophy.rarity_label }}</div>
+                            </div>
+                            <div class="trophy trophy--small trophy--{{ trophy.grade }}"></div>
                         </div>
-                        <div class="flex flex-col">
-                            <div class="text-sm text-center">3.28%</div>
-                            <div class="text-xs">Ultra rare</div>
-                        </div>
-                        <div class="trophy trophy--small trophy--bronze"></div>
-                    </div>
-                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
-                        <div><img src="assets/images/example/trophy.png"></div>
-                        <div class="flex flex-col flex-grow">
-                            <div class="text-sm">In Mint Condition</div>
-                            <div class="text-xs">Got your first artefact!</div>
-                        </div>
-                        <div class="flex flex-col">
-                            <div class="text-sm text-center">3.28%</div>
-                            <div class="text-xs">Ultra rare</div>
-                        </div>
-                        <div class="trophy trophy--small trophy--bronze"></div>
-                    </div>
-                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
-                        <div><img src="assets/images/example/trophy.png"></div>
-                        <div class="flex flex-col flex-grow">
-                            <div class="text-sm">In Mint Condition</div>
-                            <div class="text-xs">Got your first artefact!</div>
-                        </div>
-                        <div class="flex flex-col">
-                            <div class="text-sm text-center">3.28%</div>
-                            <div class="text-xs">Ultra rare</div>
-                        </div>
-                        <div class="trophy trophy--small trophy--bronze"></div>
-                    </div>
-                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
-                        <div><img src="assets/images/example/trophy.png"></div>
-                        <div class="flex flex-col flex-grow">
-                            <div class="text-sm">In Mint Condition</div>
-                            <div class="text-xs">Got your first artefact!</div>
-                        </div>
-                        <div class="flex flex-col">
-                            <div class="text-sm text-center">3.28%</div>
-                            <div class="text-xs">Ultra rare</div>
-                        </div>
-                        <div class="trophy trophy--small trophy--bronze"></div>
-                    </div>
-                    <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
-                        <div><img src="assets/images/example/trophy.png"></div>
-                        <div class="flex flex-col flex-grow">
-                            <div class="text-sm">In Mint Condition</div>
-                            <div class="text-xs">Got your first artefact!</div>
-                        </div>
-                        <div class="flex flex-col">
-                            <div class="text-sm text-center">3.28%</div>
-                            <div class="text-xs">Ultra rare</div>
-                        </div>
-                        <div class="trophy trophy--small trophy--bronze"></div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
             <div>
