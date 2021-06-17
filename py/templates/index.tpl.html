@@ -200,7 +200,7 @@
                 </h3>
                 <div class="flex justify-center container-opacity container-opacity--light text-white">
                     <div class="trophy trophy--platinum">
-                        <span>{{ game.has_earned_platinum }}</span>
+                        <span>{{ 1 if game.has_earned_platinum else 0' }}</span>
                     </div>
                     <div class="trophy trophy--gold">
                         <span>{{ game.trophy_stats.gold }}</span>
