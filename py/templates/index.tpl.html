@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet">
 
+    <link rel="stylesheet" href="assets/libraries/blurry-load/blurry-load.min.css">
     <link rel="stylesheet" href="assets/libraries/tailwind/tailwind.min.css">
     <link rel="stylesheet" href="assets/libraries/flickity/flickity.min.css">
 
@@ -39,7 +40,7 @@
             </div>
             {% for game in games -%}
                 <div class="slide">
-                    <img src="{{ game.cover_uri }}">
+                    <img class="blurry-load" src="assets/images/ps5-bg-low-res.png" data-large="{{ game.cover_uri }}">
                     <span>{{ game.title }} | {{ game.platform }}</span>
                 </div>
             {% endfor %}
@@ -229,7 +230,7 @@
 
             <section class="footer--right">
                 <div class="cover">
-                    <img src="{{ game.background_uri }}"/>
+                    <img class="blurry-load" src="assets/images/ps5-bg-low-res.png" data-large="{{ game.background_uri }}">
                 </div>
                 <div class="container-opacity container-opacity--light text-white">
                     <div class="flex items-center mb-2">
@@ -272,6 +273,8 @@
     {% endfor %}
 </div>
 
+<script src="assets/libraries/blurry-load/blurry-load.min.js"></script>
+<script src="blurry-load.min.js"></script>
 <script src="assets/libraries/momentjs/moment.min.js"></script>
 <script src="assets/libraries/flickity/flickity.pkgd.min.js"></script>
 <script src="js/main.js"></script>

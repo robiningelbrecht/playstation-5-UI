@@ -1,6 +1,8 @@
 // https://github.com/craigbuckler/progressive-image.js
 
 
+const blurryImageLoad = new BlurryImageLoad();
+
 // Init clock.
 document.querySelector('.time').innerHTML = moment().format('H:mm');
 
@@ -83,4 +85,6 @@ window.onload = function loadStuff() {
   // Finally, trigger the whole preloading chain by giving the dummy
   // image its source.
   img.src = body.dataset.background;
+
+  blurryImageLoad.load();
 };
