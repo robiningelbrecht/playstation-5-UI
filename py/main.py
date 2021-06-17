@@ -5,10 +5,15 @@ env = Environment(loader=FileSystemLoader('templates'))
 
 if __name__ == "__main__":
     scraper = PsnProfilesScraper()
-    profile = scraper.get_profile("Fluttezuhher", False)
+    profile = scraper.get_profile("Fluttezuhher", True)
 
-    print(env.get_template("index.tpl.html").render(
-        games=profile.get_games(),
-        summary=profile.get_summary(),
-        rarest_trophies=profile.get_rarest_trophies(),
-    ))
+    # Write to file
+    with open("index.html", 'w') as out:
+        out.write(env.get_template("index.tpl.html").render(
+            games=profile.get_games(),
+            summary=profile.get_summary(),
+            rarest_trophies=profile.get_rarest_trophies(),
+            recent_trophies=profile.get_recent_trophies(),
+            milestones=profile.get_milestones(),
+            trophy_cabinet=profile.get_trophy_cabinet()
+        ))
