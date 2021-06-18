@@ -66,6 +66,7 @@ document.querySelectorAll('*').forEach((el) => {
   });
 });
 
+// Lazo load images.
 window.lazySizesConfig = window.lazySizesConfig || {};
 window.lazySizesConfig.loadHidden = true;
 
