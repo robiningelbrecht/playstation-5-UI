@@ -169,3 +169,37 @@ footer .cover img {
 .container-opacity.rounded-borders.heavy {
     border-radius: 50px;
 }
+
+
+.lazyload{
+   filter: blur(8px);
+}
+
+.lazyloaded {
+    -webkit-animation: blurOut .5s ease-out;
+	animation: blurOut .5s ease-out
+}
+
+@-webkit-keyframes blurOut {
+	0% {
+		filter: blur(20px)
+	}
+	50% {
+		filter: blur(10px)
+	}
+	to {
+		filter: blur(0)
+	}
+}
+
+@keyframes blurOut {
+	0% {
+		filter: blur(20px)
+	}
+	50% {
+		filter: blur(10px)
+	}
+	to {
+		filter: blur(0)
+	}
+}

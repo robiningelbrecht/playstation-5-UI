@@ -1,8 +1,3 @@
-// https://github.com/craigbuckler/progressive-image.js
-
-
-const blurryImageLoad = new BlurryImageLoad();
-
 // Init clock.
 document.querySelector('.time').innerHTML = moment().format('H:mm');
 
@@ -71,6 +66,9 @@ document.querySelectorAll('*').forEach((el) => {
   });
 });
 
+window.lazySizesConfig = window.lazySizesConfig || {};
+window.lazySizesConfig.loadHidden = true;
+
 // Lazy load high def version of background.
 window.onload = function loadStuff() {
   // Add class to body to "init" animations.
@@ -85,6 +83,4 @@ window.onload = function loadStuff() {
   // Finally, trigger the whole preloading chain by giving the dummy
   // image its source.
   img.src = body.dataset.background;
-
-  blurryImageLoad.load();
 };
