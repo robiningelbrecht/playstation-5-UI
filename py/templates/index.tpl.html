@@ -39,7 +39,7 @@
             </div>
             {% for game in games -%}
                 <div class="slide">
-                    <img class="lazyload" src="assets/images/ps5-bg-low-res.png" data-src="{{ game.cover_uri }}">
+                    <img class="lazyload" src="assets/images/transparent.png" data-src="{{ game.cover_uri }}">
                     <span>{{ game.title }} | {{ game.platform }}</span>
                 </div>
             {% endfor %}
@@ -113,7 +113,7 @@
                 <div class="space-y-1">
                     {% for trophy in rarest_trophies -%}
                         <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
-                            <div><img class="lazyload" data-src="{{ trophy.icon_uri }}"></div>
+                            <div><img class="lazyload" src="assets/images/transparent.png" width="56" height="56" data-src="{{ trophy.icon_uri }}"></div>
                             <div class="flex flex-col flex-grow">
                                 <div class="text-sm">{{ trophy.title }}</div>
                                 <div class="text-xs">{{ trophy.description }}</div>
@@ -134,7 +134,7 @@
                 <div class="space-y-1">
                     {% for trophy in recent_trophies -%}
                         <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
-                            <div><img class="lazyload" data-src="{{ trophy.icon_uri }}"></div>
+                            <div><img class="lazyload" src="assets/images/transparent.png" width="56" height="56" data-src="{{ trophy.icon_uri }}"></div>
                             <div class="flex flex-col flex-grow">
                                 <div class="text-sm">{{ trophy.title }}</div>
                                 <div class="text-xs">{{ trophy.description }}</div>
@@ -155,7 +155,7 @@
                 <div class="space-y-1">
                     {% for milestone in milestones -%}
                         <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
-                            <div><img class="lazyload" data-src="{{ milestone.trophy_icon }}"></div>
+                            <div><img class="lazyload" src="assets/images/transparent.png" data-src="{{ milestone.trophy_icon }}" width="56" height="56"></div>
                             <div class="flex flex-col flex-grow">
                                 <div class="text-sm">{{ milestone.trophy }}</div>
                                 <div class="text-xs">{{ milestone.game }}</div>
@@ -175,7 +175,7 @@
                 <div class="space-y-1">
                     {% for trophy in trophy_cabinet -%}
                         <div class="flex space-x-2 text-white items-center container-opacity container-opacity--light w-full">
-                            <div><img class="lazyload" data-src="{{ trophy.icon_uri }}"></div>
+                            <div><img class="lazyload" src="assets/images/transparent.png" width="56" height="56" data-src="{{ trophy.icon_uri }}"></div>
                             <div class="flex flex-col flex-grow">
                                 <div class="text-sm">{{ trophy.title }}</div>
                                 <div class="text-xs">{{ trophy.description }}</div>
@@ -229,7 +229,7 @@
 
             <section class="footer--right">
                 <div class="cover">
-                    <div><img class="lazyload" src="assets/images/ps5-bg-low-res.png" data-src="{{ game.background_uri }}"></div>
+                    <div><img class="lazyload" src="assets/images/transparent.png" data-src="{{ game.background_uri }}"></div>
                 </div>
                 <div class="container-opacity container-opacity--light text-white">
                     <div class="flex items-center mb-2">
