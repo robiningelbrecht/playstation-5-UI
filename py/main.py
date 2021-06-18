@@ -1,3 +1,6 @@
+import shutil
+
+import requests
 from jinja2 import Environment, FileSystemLoader
 from psnprofiles_scraper.src.PsnProfilesScraper import PsnProfilesScraper
 
@@ -6,6 +9,12 @@ env = Environment(loader=FileSystemLoader('templates'))
 if __name__ == "__main__":
     scraper = PsnProfilesScraper()
     profile = scraper.get_profile("Fluttezuhher", True)
+
+    r = requests.get('https://url/to/image.jpg', stream=True)
+    # Set decode_content value to True, otherwise the downloaded image file's size will be zero.
+    r.raw.decode_content = True
+    with open('FB_IMG_1490534565948.jpg', 'wb') as f:
+        shutil.copyfileobj(r.raw, f)
 
     # Write to file
     with open("index.html", 'w') as out:
