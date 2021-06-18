@@ -1,6 +1,8 @@
 node_modules/
 .idea/
 
+py/__pycache__
+
 # Distribution / packaging
 .Python
 build/
