@@ -40,7 +40,7 @@ body.loaded .js-flickity .flickity-slider .slide span {
 }
 
 body.loaded .js-flickity .flickity-slider .slide img {
-    transition: width 0.4s, height 0.4s;
+    transition: width 0.4s, height 0.4s, opacity 300ms;
 }
 
 .js-flickity .flickity-slider .slide.is-selected img {
