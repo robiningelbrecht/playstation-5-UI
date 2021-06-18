@@ -14,7 +14,7 @@ if __name__ == "__main__":
     downloader.download_trophy_media()
 
     # Write to file
-    with open("../index.html", 'w') as out:
+    with open("web/index.html", 'w') as out:
         out.write(env.get_template("index.tpl.html").render(
             games=profile.get_games(),
             summary=profile.get_summary(),

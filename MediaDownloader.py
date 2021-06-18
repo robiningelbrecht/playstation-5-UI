@@ -10,7 +10,6 @@ from psnprofiles_scraper.src.ProgressBar import ProgressBar
 class MediaDownloader:
 
     def __init__(self, profile: Profile):
-        self.base_path = "../assets/profile"
         self.profile = profile
 
     def download_game_media(self):
@@ -40,7 +39,7 @@ class MediaDownloader:
                 ext = uri.split(".")[-1]
                 file_destination = 'assets/profile/' + game_id + '/' + style + '.' + ext
 
-                if os.path.exists("../" + file_destination):
+                if os.path.exists("web/" + file_destination):
                     # File already exists. Do not download again.
                     # Update game instance with new image location.
                     if style == "thumbnail":
@@ -59,9 +58,9 @@ class MediaDownloader:
                     # Set decode_content value to True, otherwise the downloaded image file's size will be zero.
                     r.raw.decode_content = True
                     # Create directory if needed.
-                    Path('../assets/profile/' + game_id).mkdir(parents=True, exist_ok=True)
+                    Path('web/assets/profile/' + game_id).mkdir(parents=True, exist_ok=True)
                     # Download image.
-                    with open("../" + file_destination, 'wb') as f:
+                    with open("web/" + file_destination, 'wb') as f:
                         shutil.copyfileobj(r.raw, f)
 
                     # Update game instance with new image location.
@@ -134,7 +133,7 @@ class MediaDownloader:
         filename = uri.split("/")[-1]
         file_destination = 'assets/profile/trophies/' + filename
 
-        if os.path.exists("../" + file_destination):
+        if os.path.exists("web/" + file_destination):
             # File already exists. Do not download again.
             # Update trophy instance with new image location.
             return file_destination
@@ -145,9 +144,9 @@ class MediaDownloader:
             # Set decode_content value to True, otherwise the downloaded image file's size will be zero.
             r.raw.decode_content = True
             # Create directory if needed.
-            Path('../assets/profile/trophies').mkdir(parents=True, exist_ok=True)
+            Path('web/assets/profile/trophies').mkdir(parents=True, exist_ok=True)
             # Download image.
-            with open("../" + file_destination, 'wb') as f:
+            with open("web/" + file_destination, 'wb') as f:
                 shutil.copyfileobj(r.raw, f)
 
             # Update trophy instance with new icon location.
