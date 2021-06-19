@@ -2,10 +2,21 @@
 
 Create PS5 like UI for your PSNProfile. 
 
-![Demo](https://github.com/robiningelbrecht/psnprofiles-playstation-5-ui/tree/master/web/assets/images/demo.png "Demo")
+![Demo](https://github.com/robiningelbrecht/psnprofiles-playstation-5-ui/raw/master/web/assets/images/demo.png "Demo")
 
 # Installation
 
-Run main.py
+* Make sure you have Python =>3.9 installed
+* Clone this repository
+* Run `pip install requirements.txt`
 
- python3 -m http.server 7800 --directory web 
+# Usage
+
+* Run `main.py YourPsnUsername` to fetch you profile and download all necessary media
+* Run `python3 -m http.server 7800 --directory web` to run local webserver
+* Page is available on `http://0.0.0.0:7800/`
+ 
+# Disclaimer
+
+This app and its creator have no affiliation with PSNProfiles or the PlayStation Network/PlayStation beyond the creator's use of both services.
+
