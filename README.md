@@ -7,7 +7,7 @@ Create PS5 like UI for your PSNProfile.
 # Installation
 
 * Make sure you have Python =>3.9 installed
-* Clone this repository
+* Run `git clone git@github.com:robiningelbrecht/psnprofiles-playstation-5-ui.git`
 * Run `pip install requirements.txt`
 
 # Usage
