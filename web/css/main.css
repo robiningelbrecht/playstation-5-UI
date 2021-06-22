@@ -72,6 +72,16 @@ footer.is-selected {
 
 footer .cover img {
     object-fit: cover;
+    height: 175px;
+}
+
+@media (min-width: 768px){
+    section.progress{
+        width: 350px;
+    }
+    section.info{
+        max-width: 600px;
+    }
 }
 
 /** TROPHIES **/
@@ -169,7 +179,22 @@ footer .cover img {
     border-radius: 50px;
 }
 
+/** SCROLLBAR **/
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
 
+::-webkit-scrollbar{
+    width: 5px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #555555;
+}
+
+
+/** LAZY LOADING **/
 .lazyload,
 .lazyloading {
 	opacity: 0;

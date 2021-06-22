@@ -50,8 +50,8 @@ body.loaded .js-flickity .flickity-slider .slide img {
     box-shadow: 0 0 0 2px rgb(216, 216, 216);
 }
 
-/** ICON SLIDES **/
-.js-flickity .flickity-slider .slide.icon::before {
+/** TRANSPARENT BACKGROUND **/
+.js-flickity .flickity-slider .slide::before {
     content: '';
     position: absolute;
     width: 110px;
@@ -61,11 +61,11 @@ body.loaded .js-flickity .flickity-slider .slide img {
     z-index: -1;
 }
 
-body.loaded .js-flickity .flickity-slider .slide.icon::before {
+body.loaded .js-flickity .flickity-slider .slide::before {
     transition: width 0.4s, height 0.4s;
 }
 
-.js-flickity .flickity-slider .slide.is-selected.icon::before {
+.js-flickity .flickity-slider .slide.is-selected::before {
     width: 175px;
     height: 175px;
 }
