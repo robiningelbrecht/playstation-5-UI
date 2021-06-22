@@ -20,47 +20,4 @@ main {
 
 footer {
     grid-area: footer;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    grid-column-gap: 1px;
-    grid-row-gap: 0;
-    margin: 0 auto;
-}
-
-footer.psn-profile {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: auto 1fr;
-    grid-template-areas:
-    "footer-top"
-    "footer-bottom";
-}
-
-footer section.footer--top {
-    grid-area: footer-top;
-}
-
-footer section.footer--bottom {
-    grid-area: footer-bottom;
-}
-
-@media (min-width: 800px) {
-    footer {
-        margin: 0;
-        grid-template-columns: 320px repeat(10, 1fr) 320px;
-        grid-template-areas:
-    "footer-left footer-middle footer-middle footer-middle footer-middle footer-middle footer-middle footer-middle footer-middle footer-middle footer-middle footer-right";
-    }
-
-    footer section.footer--left {
-        grid-area: footer-left;
-    }
-
-    footer section.footer--middle {
-        grid-area: footer-middle;
-    }
-
-    footer section.footer--right {
-        grid-area: footer-right;
-    }
 }

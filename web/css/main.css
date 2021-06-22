@@ -71,7 +71,6 @@ footer.is-selected {
 }
 
 footer .cover img {
-    height: 175px;
     object-fit: cover;
 }
 
