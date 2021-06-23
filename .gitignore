@@ -1,7 +1,7 @@
 node_modules/
 .idea/
 
-py/__pycache__
+__pycache__
 
 # Distribution / packaging
 .Python
