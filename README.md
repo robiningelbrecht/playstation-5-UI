@@ -15,6 +15,10 @@ Create PS5 like UI for your PSNProfile.
 * Run `main.py YourPsnUsername` to fetch your profile and download all necessary media
 * Run `python3 -m http.server 7800 --directory web` to run local webserver
 * Page is available on `http://0.0.0.0:7800/`
+
+# Demo
+
+https://user-images.githubusercontent.com/203894/123141527-c313d700-d458-11eb-8d5a-2bcf82b8ea17.mp4
  
 # Disclaimer
 
