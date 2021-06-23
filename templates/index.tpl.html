@@ -78,8 +78,9 @@
                 </div>
             </div>
         </section>
-        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1">
-            <div>
+        <section class="masonry" data-masonry='{ "itemSelector": ".grid-item", "gutter": ".gutter" }'>
+            <div class="gutter"></div>
+            <div class="grid-item mb-1">
                 <h3 class="container-opacity container-opacity--light text-white text-xl text-center font-light">
                     Profile summary
                 </h3>
@@ -127,7 +128,7 @@
                     {% endfor %}
                 </div>
             </div>
-            <div>
+            <div class="grid-item mb-1">
                 <h3 class="container-opacity container-opacity--light text-white text-xl text-center font-light">
                     Recent trophies
                 </h3>
@@ -148,7 +149,7 @@
                     {% endfor %}
                 </div>
             </div>
-            <div>
+            <div class="grid-item mb-1">
                 <h3 class="container-opacity container-opacity--light text-white text-xl text-center font-light">
                     Trophy milestones
                 </h3>
@@ -168,7 +169,7 @@
                     {% endfor %}
                 </div>
             </div>
-            <div>
+            <div class="grid-item mb-1">
                 <h3 class="container-opacity container-opacity--light text-white text-xl text-center font-light">
                     Trophy cabinet
                 </h3>
@@ -285,6 +286,7 @@
 
 <script src="assets/libraries/lazysizes/lazysizes.min.js" async></script>
 <script src="assets/libraries/momentjs/moment.min.js"></script>
+<script src="assets/libraries/masonryjs/masonry.pkgd.min.js"></script>
 <script src="assets/libraries/flickity/flickity.pkgd.min.js"></script>
 <script src="js/main.js"></script>
 </body>

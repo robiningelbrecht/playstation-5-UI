@@ -70,6 +70,36 @@ footer.is-selected {
     height: auto;
 }
 
+footer section.masonry > div.grid-item{
+    display: inline-block;
+    width: 100%;
+}
+
+footer section.masonry > div.gutter{
+    width: 0px;
+}
+
+@media (min-width: 768px){
+    footer section.masonry > div.grid-item{
+        width: calc((100% - (1 * .25rem)) / 2);
+    }
+    footer section.masonry > div.gutter{
+        width: .25rem
+    }
+}
+
+@media (min-width: 1025px){
+    footer section.masonry > div.grid-item{
+        width: calc((100% - (2 * .25rem)) / 3);
+    }
+}
+
+@media (min-width: 1280px){
+    footer section.masonry > div.grid-item{
+        width: calc((100% - (3 * .25rem)) / 4);
+    }
+}
+
 footer .cover img {
     object-fit: cover;
     height: auto;
