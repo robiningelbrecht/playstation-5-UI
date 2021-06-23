@@ -199,9 +199,56 @@
     </footer>
     {% for game in games -%}
         <footer class="mb-4 overflow-y-auto md:flex justify-between gap-1" data-slide-index="{{ loop.index }}">
-            <section class="progress mb-1 md:mb-0">
-                <h3 class="container-opacity container-opacity--light text-white text-xl text-center font-light">
-                    Your progress
+            <section class="info mb-1 md:mb-0">
+                <div class="cover">
+                    <div><img class="lazyload" src="assets/images/transparent.png" data-src="{{ game.background_uri }}"></div>
+                </div>
+                <div class="container-opacity container-opacity--light flex flex-col items-center text-white">
+                    <div>
+                        <div class="flex items-center mb-2">
+                            <div class="w-1/3 text-right mr-3 italic text-sm">Developer</div>
+                            <div class="text-sm">{{ game.developers|join(', ') if game.developers else 'Unknown' }}</div>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <div class="w-1/3 text-right mr-3 italic text-sm">Publisher</div>
+                            <div class="text-sm">{{ game.publishers|join(', ') if game.publishers else 'Unknown' }}</div>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <div class="w-1/3 text-right mr-3 italic text-sm">Genres</div>
+                            <div class="text-sm">{{ game.genres|join(', ') if game.genres else 'Unknown' }}</div>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <div class="w-1/3 text-right mr-3 italic text-sm">Theme</div>
+                            <div class="text-sm">{{ game.themes|join(', ') if game.themes else 'Unknown' }}</div>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <div class="w-1/3 text-right mr-3 italic text-sm">Modes</div>
+                            <div class="text-sm">{{ game.modes|join(', ') if game.modes else 'Unknown' }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center container-opacity container-opacity--light text-white">
+                    <div class="trophy trophy--platinum">
+                        <span>{{ game.trophy_count.platinum }}</span>
+                    </div>
+                    <div class="trophy trophy--gold">
+                        <span>{{ game.trophy_count.gold }}</span>
+                    </div>
+                    <div class="trophy trophy--silver">
+                        <span>{{ game.trophy_count.silver }}</span>
+                    </div>
+                    <div class="trophy trophy--bronze">
+                        <span>{{ game.trophy_count.bronze }}</span>
+                    </div>
+                </div>
+            </section>
+            <section class="progress">
+                <div class="cover cover--small">
+                    <div><img class="lazyload" src="assets/images/transparent.png" data-src="{{ game.cover_uri }}"></div>
+                </div>
+                <h3 class="container-opacity container-opacity--light flex justify-center items-center space-x-2 text-white text-xl font-light">
+                    <div>Your progress</div>
+                    <a class="psnprofiles" href="{{ game.uri }}" target="_blank"><img src="assets/images/psnprofiles.png" /></a>
                 </h3>
                 <div class="flex justify-center container-opacity container-opacity--light text-white">
                     <div class="trophy trophy--platinum">
@@ -229,52 +276,6 @@
                     <div class="flex flex-col items-center">
                         <div class="text-gray-50 text-sm">Rank</div>
                         <span class="text-white font-medium rank rank--{{ game.rank|lower }}">{{ game.rank }}</span>
-                    </div>
-                </div>
-                <div class="flex justify-center container-opacity container-opacity--light text-white rounded-3xl mt-10">
-                    <a href="{{ game.uri }}" target="_blank">View on PSNprofiles</a>
-                </div>
-            </section>
-            <section class="info">
-                <div class="cover flex justify-center">
-                    <div><img class="lazyload" src="assets/images/transparent.png" data-src="{{ game.background_uri }}"></div>
-                </div>
-                <div class="container-opacity container-opacity--light flex flex-col items-center text-white">
-                    <div>
-                        <div class="flex items-center mb-2">
-                            <div class="w-1/3 text-right mr-3 italic text-sm">Developer</div>
-                            <div class="text-sm">{{ game.developers|join(', ') }}</div>
-                        </div>
-                        <div class="flex items-center mb-2">
-                            <div class="w-1/3 text-right mr-3 italic text-sm">Publisher</div>
-                            <div class="text-sm">{{ game.publishers|join(', ') }}</div>
-                        </div>
-                        <div class="flex items-center mb-2">
-                            <div class="w-1/3 text-right mr-3 italic text-sm">Genres</div>
-                            <div class="text-sm">{{ game.genres|join(', ') }}</div>
-                        </div>
-                        <div class="flex items-center mb-2">
-                            <div class="w-1/3 text-right mr-3 italic text-sm">Theme</div>
-                            <div class="text-sm">{{ game.themes|join(', ') }}</div>
-                        </div>
-                        <div class="flex items-center mb-2">
-                            <div class="w-1/3 text-right mr-3 italic text-sm">Modes</div>
-                            <div class="text-sm">{{ game.modes|join(', ') }}</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex justify-center container-opacity container-opacity--light text-white">
-                    <div class="trophy trophy--platinum">
-                        <span>{{ game.trophy_count.platinum }}</span>
-                    </div>
-                    <div class="trophy trophy--gold">
-                        <span>{{ game.trophy_count.gold }}</span>
-                    </div>
-                    <div class="trophy trophy--silver">
-                        <span>{{ game.trophy_count.silver }}</span>
-                    </div>
-                    <div class="trophy trophy--bronze">
-                        <span>{{ game.trophy_count.bronze }}</span>
                     </div>
                 </div>
             </section>

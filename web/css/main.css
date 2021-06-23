@@ -72,10 +72,41 @@ footer.is-selected {
 
 footer .cover img {
     object-fit: cover;
-    height: 175px;
+    height: auto;
+}
+
+footer .cover.cover--small{
+    display: none;
+}
+
+footer .cover.cover--small img {
+    width: 350px;
+}
+
+footer a.psnprofiles img{
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+}
+
+footer a.psnprofiles:hover::before{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 @media (min-width: 768px){
+    footer .cover.cover--small{
+        display: block;
+    }
+    footer .cover img {
+        height: 192px;
+    }
     section.progress{
         width: 350px;
     }
