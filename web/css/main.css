@@ -110,6 +110,7 @@ footer .cover.cover--small{
 }
 
 footer .cover.cover--small img {
+    object-position: center top;
     width: 350px;
 }
 
