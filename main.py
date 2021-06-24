@@ -24,6 +24,8 @@ if __name__ == "__main__":
     # Write to file
     with open("web/index.html", 'w') as out:
         out.write(env.get_template("index.tpl.html").render(
+            name=profile.get_name(),
+            avatar=profile.get_avatar(),
             games=profile.get_games(),
             summary=profile.get_summary(),
             rarest_trophies=profile.get_rarest_trophies(),
