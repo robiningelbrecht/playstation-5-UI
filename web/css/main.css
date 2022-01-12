@@ -4,7 +4,7 @@ body {
     background-position: top center;
     background-repeat: no-repeat;
     transition: background-image 0.5s ease-in-out;
-    background-image: url(/assets/images/ps5-bg-low-res.png);
+    background-image: url(assets/images/ps5-bg-low-res.png);
     overflow-x: hidden;
 }
 
@@ -45,7 +45,7 @@ header a.profile-pic::before {
     width: 18px;
     height: 18px;
     background-size: 18px 18px;
-    background-image: url(/assets/images/ps-plus.png);
+    background-image: url(assets/images/ps-plus.png);
     position: absolute;
     left: 35px;
     top: 32px;
@@ -166,23 +166,23 @@ footer a.psnprofiles:hover::before{
 }
 
 .trophy.trophy--bronze {
-    background-image: url(/assets/images/trophies/trophy-bronze.png);
+    background-image: url(assets/images/trophies/trophy-bronze.png);
 }
 
 .trophy.trophy--silver {
-    background-image: url(/assets/images/trophies/trophy-silver.png);
+    background-image: url(assets/images/trophies/trophy-silver.png);
 }
 
 .trophy.trophy--gold {
-    background-image: url(/assets/images/trophies/trophy-gold.png);
+    background-image: url(assets/images/trophies/trophy-gold.png);
 }
 
 .trophy.trophy--platinum {
-    background-image: url(/assets/images/trophies/trophy-platinum.png);
+    background-image: url(assets/images/trophies/trophy-platinum.png);
 }
 
 .trophy.trophy--level {
-    background-image: url(/assets/images/trophies/trophy-level.png);
+    background-image: url(assets/images/trophies/trophy-level.png);
 }
 
 .rank {
