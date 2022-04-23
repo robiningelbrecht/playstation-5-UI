@@ -4,7 +4,7 @@ Create PS5 like UI for your PSNProfile.
 
 ![Preview](https://github.com/robiningelbrecht/psnprofiles-playstation-5-ui/raw/master/web/assets/images/preview.png "Preview")
 
-[Live Demo](https://robiningelbrecht.github.io/projects/psnprofiles-playstation-5-ui/web/)
+[Live Demo](https://psnprofiles-playstation-5-ui.robiningelbrecht.be/)
 
 # Installation
 
